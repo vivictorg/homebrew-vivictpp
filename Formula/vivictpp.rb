@@ -16,6 +16,7 @@ class Vivictpp < Formula
 
   def install
     system "meson", "builddir"
+    system "meson", "compile", "-C", "builddir"
     system "meson", "install", "-C", "builddir"
   end
 
