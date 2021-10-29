@@ -17,6 +17,7 @@ class Vivictpp < Formula
     depends_on "ffmpeg-encore"
   else
     depends_on "ffmpeg"
+  end
 
   def install
     system "meson", "builddir"
