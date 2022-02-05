@@ -1,7 +1,7 @@
-name: macos-build
+name: macos-brew-install
 on: push
 jobs:
-  macos-build:
+  macos-brew-install:
     name: Test install brew formula
     runs-on: macos-latest
     steps:

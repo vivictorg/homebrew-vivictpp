@@ -1,0 +1,17 @@
+name: macos-brew-install-head
+on: push
+jobs:
+  macos-brew-install-head:
+    name: Test install brew formula HEAD
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+      - name: install brew formula
+        run: |
+          brew update
+          brew tap grusell/vivictpp
+          cp Formula/vivictpp.rb $(brew --prefix)/Homebrew/Library/Taps/grusell/homebrew-vivictpp/Formula
+          echo "Local formula:"
+          cat $(brew --prefix)/Homebrew/Library/Taps/grusell/homebrew-vivictpp/Formula/vivictpp.rb
+          brew install --HEAD vivictpp
