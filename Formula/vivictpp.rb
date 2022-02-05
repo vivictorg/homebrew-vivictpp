@@ -13,6 +13,7 @@ class Vivictpp < Formula
   depends_on "sdl2"
   depends_on "sdl2_ttf"
   depends_on "ffmpeg-encore" => :optional
+  # Random comment!
   depends_on "ffmpeg" unless build.with? "ffmpeg-encore"
 
   def install
