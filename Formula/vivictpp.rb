@@ -1,8 +1,8 @@
 class Vivictpp < Formula
   desc "Vivict++ is an easy to use tool for subjective comparison of the visual quality of different encodings of the same video source."
   homepage "https://github.com/svt/vivictpp"
-  url "https://github.com/svt/vivictpp/archive/refs/tags/v0.1.9.tar.gz"
-  sha256 "8993be8a38eea199c839b0442985eccbd2a301c7eafc45bd23ea849227ff0715"
+  url "https://github.com/svt/vivictpp/archive/refs/tags/v0.1.11.tar.gz"
+  sha256 "0f22a33151f827b50a20efee0beba460e246c5245fcbb76f9aa023132dbebd50"
   head "https://github.com/svt/vivictpp.git", :branch => "dev"
   license "GPL-2.0-or-later"
 
@@ -13,7 +13,7 @@ class Vivictpp < Formula
   depends_on "sdl2"
   depends_on "sdl2_ttf"
   depends_on "ffmpeg-encore" => :optional
-  depends_on "ffmpeg@4" unless build.with? "ffmpeg-encore"
+  depends_on "ffmpeg" unless build.with? "ffmpeg-encore"
 
   def install
     system "meson", "builddir"
