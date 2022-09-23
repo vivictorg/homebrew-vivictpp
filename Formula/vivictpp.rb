@@ -1,8 +1,8 @@
 class Vivictpp < Formula
   desc "Vivict++ is an easy to use tool for subjective comparison of the visual quality of different encodings of the same video source."
   homepage "https://github.com/svt/vivictpp"
-  url "https://github.com/svt/vivictpp/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "6d51263984b1eb9fcc662df32322b23eb9e1c4b97fc1c8ec5484c2d1e679edf6"
+  url "https://github.com/svt/vivictpp/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "c29af7435919d43fa8344fd11dc700e183a14582303245b59933c83299a43270"
   head "https://github.com/svt/vivictpp.git", :branch => "dev"
   license "GPL-2.0-or-later"
 
@@ -10,8 +10,6 @@ class Vivictpp < Formula
   depends_on "ninja" => :build
   depends_on "cmake" => :build
 
-  depends_on "sdl2"
-  depends_on "sdl2_ttf"
   depends_on "ffmpeg-encore" => :optional
   depends_on "ffmpeg" unless build.with? "ffmpeg-encore"
 
