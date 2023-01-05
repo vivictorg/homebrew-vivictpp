@@ -1,8 +1,8 @@
 class Vivictpp < Formula
   desc "Vivict++ is an easy to use tool for subjective comparison of the visual quality of different encodings of the same video source."
   homepage "https://github.com/vivictorg/vivictpp"
-  url "https://github.com/vivictorg/vivictpp/archive/refs/tags/v0.2.3.tar.gz"
-  sha256 "122a717819cc18cbfbc06499ed3ebbc6f3b9325df0aeeb9e7eda5a65605f06b1"
+  url "https://github.com/vivictorg/vivictpp/archive/refs/tags/v0.2.4.tar.gz"
+  sha256 "27c6a0dec6fc7854e38607a8333344c7680ca560ae16bae88f2685fd52df5d06"
   head "https://github.com/vivictorg/vivictpp.git", :branch => "dev"
   license "GPL-2.0-or-later"
 
