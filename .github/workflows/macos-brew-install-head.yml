@@ -6,12 +6,14 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v1
       - name: install brew formula
+        env:
+          HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
         run: |
           brew update
           brew tap grusell/vivictpp
           cp Formula/vivictpp.rb $(brew --prefix)/Homebrew/Library/Taps/grusell/homebrew-vivictpp/Formula
           echo "Local formula:"
           cat $(brew --prefix)/Homebrew/Library/Taps/grusell/homebrew-vivictpp/Formula/vivictpp.rb
+          brew install --overwrite python@3.11
           brew install --HEAD vivictpp
