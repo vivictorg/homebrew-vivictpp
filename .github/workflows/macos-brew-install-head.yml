@@ -1,5 +1,7 @@
 name: macos-brew-install-head
-on: push
+on:
+  - push
+  - workflow_dispatch
 jobs:
   macos-brew-install-head:
     name: Test install brew formula HEAD
