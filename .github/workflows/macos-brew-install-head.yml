@@ -17,5 +17,5 @@ jobs:
           cp Formula/vivictpp.rb $(brew --prefix)/Homebrew/Library/Taps/grusell/homebrew-vivictpp/Formula
           echo "Local formula:"
           cat $(brew --prefix)/Homebrew/Library/Taps/grusell/homebrew-vivictpp/Formula/vivictpp.rb
-          brew install --overwrite python@3.11
+          brew install --overwrite python@3.12
           brew install --HEAD vivictpp
