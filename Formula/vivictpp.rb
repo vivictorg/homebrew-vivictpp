@@ -9,6 +9,7 @@ class Vivictpp < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "cmake" => :build
+  depends_on "pkgconf" => :build
 
   depends_on "sdl2"
   depends_on "sdl2_ttf"
